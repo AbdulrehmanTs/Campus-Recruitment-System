@@ -3,7 +3,7 @@ import {View, Text, TouchableOpacity, Image, StyleSheet, ScrollView} from 'react
 import FormInput from '../Components/FormInput';
 import FormButton from '../Components/FormButton';
 import SocialButton from '../Components/SocialButtons';
-import { AuthContext } from '../Navigations/AuthProvider'
+import { AuthContext } from '../Navigations/AuthProvider';
 
 const LoginScreen = ({navigation})=>{
     const [email, setEmail] = useState();
@@ -28,7 +28,17 @@ const LoginScreen = ({navigation})=>{
             autoCapitalize="none"
             autoCorrect={false}
         />
-    
+
+        <FormInput
+            labelValue={email}
+            onChangeText={(userEmail) => setEmail(userEmail)}
+            placeholderText="Email"
+            iconType="adduser"
+            keyboardType="email-address"
+            autoCapitalize="none"
+            autoCorrect={false}
+        />
+
         <FormInput
             labelValue={password}
             onChangeText={(userPassword) => setPassword(userPassword)}
