@@ -29,15 +29,6 @@ const LoginScreen = ({navigation})=>{
             autoCorrect={false}
         />
 
-        <FormInput
-            labelValue={email}
-            onChangeText={(userEmail) => setEmail(userEmail)}
-            placeholderText="Email"
-            iconType="adduser"
-            keyboardType="email-address"
-            autoCapitalize="none"
-            autoCorrect={false}
-        />
 
         <FormInput
             labelValue={password}
